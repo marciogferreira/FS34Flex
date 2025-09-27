@@ -1,0 +1,29 @@
+MODULO: HTML
+
+OBJETIVOS:
+- INTRODUÇAO AO HTML
+- TAGS (COMANDOS)
+- TAG CASADA
+- TAG SOLTEIRA
+
+
+-------------------------
+EXPLICAÇÃO DE TAGS:
+
+EXEMPLO TAG CASADA:
+<tagname>
+  <tagname>
+  </tagname>
+</tagname>
+
+EXEMPLO TAG SOLTEIRA:
+<tagname />
+
+ATRIBUTOS SÃO CONFIGURAÇÕES DE TAGS
+SÃO PARAMETROS INSERIDOS EM TAGS:
+
+<tagname atributo="valor" atributo="valor" />
+
+<tagname atributo="valor" atributo="valor">
+
+</tagname>

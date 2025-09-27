@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Introdução ao HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1 -->
+    <section class="text-center">
+      <h2 class="text-5xl font-bold text-blue-400">Introdução ao HTML</h2>
+      <p class="mt-6 text-xl text-gray-300">
+        <strong>HTML (HyperText Markup Language)</strong> é a linguagem base da web.
+      </p>
+    </section>
+
+     <!-- Slide 2 -->
+    <section>
+      <h2 class="text-4xl font-semibold text-yellow-300">O que é HTML?</h2>
+      <ul class="mt-6 space-y-4 text-lg text-gray-200">
+        <li>🔹 <strong>HTML (HyperText Markup Language)</strong> é a linguagem base da web.</li>
+        <li>🔹 <strong>Tim Berners-Lee </strong> é o criado do HTML</li>
+        <li>🔹 Linguagem de marcação usada para estruturar páginas web</li>
+        <li>🔹 Define títulos, parágrafos, links, imagens, tabelas e muito mais</li>
+        <li>🔹 Interpretado pelos navegadores</li>
+        <li>🔹 O HTML foi criado em 1991 para resolver a comunicação entre pesquisadores</li>
+      </ul>
+    </section>
+
+
+    <!-- Slide 3 -->
+    <section>
+      <h2 class="text-4xl font-semibold text-green-300">Estrutura Básica</h2>
+      <pre class="bg-gray-800 p-4 rounded-xl mt-6 shadow-lg">
+        <code data-trim class="text-sm">
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Minha Página</title>
+        </head>
+        <body>
+            <h1>Olá, Mundo!</h1>
+            <p>Este é meu primeiro parágrafo em HTML.</p>
+        </body>
+        </html>
+        </code>
+      </pre>
+    </section>
+
+    <!-- Slide 4 -->
+    <section>
+      <h2 class="text-4xl font-semibold text-pink-300">Principais Tags</h2>
+      <ul class="mt-6 grid grid-cols-2 gap-4 text-lg text-gray-200">
+        <li><code>&lt;h1&gt;</code> → Título</li>
+        <li><code>&lt;p&gt;</code> → Parágrafo</li>
+        <li><code>&lt;a&gt;</code> → Link</li>
+        <li><code>&lt;img&gt;</code> → Imagem</li>
+        <li><code>&lt;div&gt;</code> → Container</li>
+      </ul>
+    </section>
+
+    <!-- Slide 5 -->
+    <section>
+      <h2 class="text-4xl font-semibold text-indigo-300">Próximos Passos</h2>
+      <ul class="mt-6 space-y-3 text-lg text-gray-200">
+        <li>🚀 Estudar CSS para estilizar páginas</li>
+        <li>⚡ Aprender JavaScript para interatividade</li>
+        <li>♿ Explorar boas práticas de acessibilidade</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+
+<!-- Scripts do Reveal.js -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    transition: 'slide', // slide, fade, convex, concave, zoom
+    controls: true,
+    progress: true
+  });
+</script>
+
+</body>
+</html>
