@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID e Class</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: yellow;
+            height: 200px;
+        }
+        div {
+            border: 3px solid black;
+            background: red;
+        }
+        /* # é referente ao id */
+        #div1 {
+            background: green;
+        }
+        #div2 {
+            background: blue;
+        }
+        /* . é referente ao class do elemento */
+        .titulo-receita {
+            font-size: 30px;
+            color: rgb(130, 11, 84)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="div1">
+            <h3>Receitas Diversas</h3>
+        </div>
+        <div id="div2">
+            Div 2
+        </div>
+    </header>
+    <main>
+        <h3 class="titulo-receita">Bolo de Laranja</h3>
+        <p>Receita</p>
+        <hr>
+        <h3 class="titulo-receita">Bolo de Chocolate</h3>
+        <p>Receita</p>
+        <hr>
+        <h3 class="titulo-receita">Bolo de Milho</h3>
+        <p>Receita</p>
+    </main>
+</body>
+</html>

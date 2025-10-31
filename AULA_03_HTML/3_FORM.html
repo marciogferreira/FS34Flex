@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários com HTML</title>
+</head>
+<body>
+    <form action="https://google.com/search" method="POST">
+
+        <input type="password" name="senha">
+
+        <label>Nome:</label> <br />
+        <input type="text" name="nome" placeholder="João Silva" /> <br />
+
+        <label>E-mail:</label> <br />
+        <input type="email" name="email" placeholder="joaosilva@gmail.com" /> <br />
+
+        <br />
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+
+        <a href="">Botão Simples</a>
+    </form>
+    <hr />
+    <form>
+
+        <label>Cursos</label> 
+        <br />
+
+        <input type="checkbox" name="html5" id="html5" />
+        <label for="html5">HTML 5</label>
+
+        <br />
+        <input type="checkbox" name="css3" id="css3" />
+        <label for="css3">CSS3</label>
+        
+        <br />
+        <input type="checkbox" name="javascript" id="javascript" />
+        <label for="javascript">JavaScript</label>
+
+        <hr />
+        <label>Estado Civil</label>
+        <br />
+        <input type="radio" name="estado_civil" value="Solteiro(a)" id="solteiro" />
+        <label for="solteiro">Solteiro(a)</label>
+
+        <br />
+        <input type="radio" name="estado_civil" value="Casado(a)" id="casado" />
+        <label for="casado">Casado(a)</label>
+
+    </form>
+    <hr />
+    <form>
+        <label for="">Selecione sua Cidade</label>
+        <br />
+        <select name="cidade">
+            <option>Selecione a Cidade</option>
+            <option value="Fortaleza">Fortaleza</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+        </select>
+        <br />
+        <label for="">Mensagem</label>
+        <br />
+        <textarea name="mensagem" rows="10"></textarea>
+    </form>
+    
+</body>
+</html>

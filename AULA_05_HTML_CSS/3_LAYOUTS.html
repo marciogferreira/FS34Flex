@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+        header {
+            height: 150px;
+            display: flex;           
+        }
+        #logo {
+           width: 20%;
+        }
+        #logo img:hover {
+            height: 110%;
+        }
+        #menu {
+            padding: 20px;
+            width: 80%;
+            
+            display: flex;
+            /* Leva o conteudo para a direita */
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+        
+        #menu nav ul {
+            display: flex;
+        }
+        #menu nav ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        #menu nav ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            transition: border-radius 500ms, background-color 500ms, color 500ms;
+        }
+
+        #menu nav ul li a:hover {
+            background-color: rgb(19, 19, 181);
+            padding: 5px;
+            color: white;
+            border-radius: 20px 0px 20px 0px;
+           
+        }
+
+        #slideshow {}
+
+        #banners {
+            display: flex;
+        }
+        #banner1 {
+            padding: 20px;
+            width: 50%;
+        }
+        #banner2 {
+            padding: 20px;
+            width: 50%;
+        }
+        #banner2 img {
+            opacity: 0.5;
+            transition: opacity 500ms;
+        }
+        #banner2 img:hover {
+            opacity: 1;
+        }
+
+        footer {
+            height: 150px;
+            background-color: black;
+            overflow: hidden;
+
+        }
+        footer div {
+            background-color: orange;
+            height: 150px;
+            margin-left: 95%;
+            border-radius: 500px 0px 0px 0px;
+            transition: margin 250ms, border-radius 250ms;
+            
+        }
+        footer:hover div {
+            margin-left: 0px;
+            border-radius: 0px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo.png" height="100%" alt="">
+        </div>
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Quem Somos</a></li>
+                    <li><a href="">Viagens</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="slideshow">
+            <img src="images/paisagem.jpg" width="100%"  alt="">
+        </div>
+        <div id="banners">
+            <div id="banner1">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta perferendis ratione quis eum iste enim, cupiditate nostrum laudantium explicabo illo! Perspiciatis aperiam enim harum accusamus sunt temporibus cum amet saepe.
+                </p>
+            </div>
+            <div id="banner2">
+                <img src="images/paraty.jpg" width="100%" alt="">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            
+        </div>
+    </footer>
+    <br><br><br><br><br>
+</body>
+</html>
