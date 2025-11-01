@@ -1,0 +1,20 @@
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */
+    
+    justify-content: center;
+    align-items: flex-start;
+}
+#caixa1 {
+    background-color: red;
+    width: 10%;
+}
+#caixa2 {
+    background-color: yellow;
+    width: 10%
+}

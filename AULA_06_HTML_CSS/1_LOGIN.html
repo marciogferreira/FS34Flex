@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticaçao</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            background-image: url('images/background.jpg');
+            background-size: cover ;
+
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        #caixa {
+            margin: 10px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            color: red;
+        }
+        input {
+          
+            border-radius: 5px;
+            border: 1px solid rgb(179, 178, 178);
+            
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        input:focus {
+            border: 2px solid orange;
+            outline: none;
+        }
+        input[type=submit] {
+            background-color: blue;
+            color: white;
+            padding: 8px;
+            margin-top: 10px
+        }
+        #botoes-acoes {
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <form action="">
+            <label for="">Login</label>
+            <br>
+            <input type="text" name="" id="" placeholder="José">
+            <br>
+            <label for="">Senha</label>
+            <br>
+            <input type="password" name="" id="">
+            <br>
+            <div id="botoes-acoes">
+                <input type="submit" value="Acessar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
