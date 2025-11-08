@@ -3,6 +3,64 @@
     padding: 0;
 }
 
+/* ANIMATIONS E KEYFRAMES */
+@keyframes topBottomAnimation {
+    /* from {
+        bottom: 10px;
+    }
+    to {
+        bottom: 200px;
+    } */
+    0% { bottom: 10px; }
+    50% { bottom: 40px; }
+    100% { bottom: 10px; }
+}
+
+@keyframes aumentarImagem {
+    0% { width: 100%; }
+    50% { width: 110%; }
+    100% { width: 100%; }
+}
+
+/* POSITIONS */
+#whatsapp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    /* animation: topBottomAnimation 1s infinite; */
+
+    animation-name: topBottomAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+.animacaoTopBottom {
+    position: relative;
+    animation-name: topBottomAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.animacaoAumentarImagem {
+    
+    animation-name: aumentarImagem;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+header {
+    background-color: brown;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    padding: 20px
+}
+
 main {
     background: black;
     padding: 20px;
@@ -19,10 +77,21 @@ main {
     margin-bottom: 20px;
 }
 
+footer {
+    padding: 20px;
+    background-color: #111;
+    min-height: 200px;
+}
+
 /* CSS MEDIA QUERIES 0 a 400px*/
 @media screen and (max-width: 400px) {
     /* ESTE CSS SÓ SE APLICA A TELAS DE 0 A 400px DE LARGURA */
     .banners {
         flex-direction: column;
     }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+    /* ESTE CSS SÓ SE APLICA A TELAS DE 401 A 768px DE LARGURA */
+    
 }
