@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background: black;
+    padding: 20px;
+    min-height: 140px;
+}
+
+.banners {
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* CSS MEDIA QUERIES 0 a 400px*/
+@media screen and (max-width: 400px) {
+    /* ESTE CSS SÓ SE APLICA A TELAS DE 0 A 400px DE LARGURA */
+    .banners {
+        flex-direction: column;
+    }
+}

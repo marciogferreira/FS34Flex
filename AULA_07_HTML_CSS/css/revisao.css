@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #E7E7E7;
+    height: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    /* Largura */
+    width: 100px; 
+    padding: 20px
+}
+
+#logo img {
+    width: 80% 
+}
+
+/* MENU */
+#menu { 
+    padding: 20px; 
+}
+#menu nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+#menu nav ul li {
+    list-style: none;
+
+    a {
+        color: rgb(111, 75, 8);
+        text-decoration: none;
+    }
+}
