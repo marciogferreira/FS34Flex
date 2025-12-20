@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend, Backend e FullStack</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+
+  <style>
+    code {
+      background: #222;
+      color: #00ffcc;
+      padding: 10px;
+      display: block;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+  <!-- Capa -->
+  <section>
+    <h3>Frontend e Backend</h3>
+    <p>Uma Jornada pelo essencial do desenvolvimento</p>
+    <p>Prof. Márcio Ferreira</p>
+  </section>
+
+  <section>
+    <h3>Profissoes</h3>
+  </section>
+  <!-- O que é Frontend -->
+  <section>
+    <h2>O que é Frontend?</h2>
+    <ul>
+      <li>Parte visual da aplicação</li>
+      <li>Interface que o usuário interage</li>
+      <li>Roda no navegador</li>
+    </ul>
+  </section>
+
+  <!-- Tecnologias Frontend -->
+  <section>
+    <h2>Tecnologias Frontend</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS / Tailwind / Bootstrap</li>
+      <li>JavaScript</li>
+      <li>React, Vue, Angular</li>
+    </ul>
+  </section>
+
+  <!-- Exemplo HTML -->
+  <section>
+    <h2>Exemplo Frontend - HTML</h2>
+    <code>
+&lt;h1&gt;Olá Mundo&lt;/h1&gt;
+&lt;button&gt;Clique aqui&lt;/button&gt;
+    </code>
+  </section>
+
+  <!-- Exemplo JS -->
+  <section>
+    <h2>Exemplo Frontend - JavaScript</h2>
+    <code>
+document.querySelector("button")
+  .addEventListener("click", () => {
+    alert("Olá Frontend!");
+});
+    </code>
+  </section>
+
+  <!-- O que é Backend -->
+  <section>
+    <h2>O que é Backend?</h2>
+    <ul>
+      <li>Parte lógica do sistema</li>
+      <li>Processa regras de negócio</li>
+      <li>Comunica com o banco de dados</li>
+      <li>Roda no servidor</li>
+    </ul>
+  </section>
+
+  <!-- Tecnologias Backend -->
+  <section>
+    <h2>Tecnologias Backend</h2>
+    <ul>
+      <li>PHP (Laravel)</li>
+      <li>Node.js (Express, NestJS)</li>
+      <li>Java (Spring)</li>
+      <li>Python (Django, Flask)</li>
+    </ul>
+  </section>
+
+  <!-- Exemplo Backend Node -->
+  <section>
+    <h2>Exemplo Backend - Node.js</h2>
+    <code>
+const express = require('express');
+const app = express();
+
+app.get('/api/hello', (req, res) => {
+  res.json({ mensagem: 'Olá Backend!' });
+});
+
+app.listen(3000);
+    </code>
+  </section>
+
+  <!-- Exemplo Backend PHP -->
+  <section>
+    <h2>Exemplo Backend - PHP</h2>
+    <code>
+&lt;?php
+echo json_encode([
+  "mensagem" => "Olá Backend em PHP"
+]);
+    </code>
+  </section>
+
+  <!-- O que é Banco de Dados -->
+  <section>
+    <h2>O que é Banco de Dados?</h2>
+    <ul>
+      <li>Armazena dados do sistema</li>
+      <li>Usuários, pedidos, produtos</li>
+      <li>Essencial para aplicações</li>
+    </ul>
+  </section>
+
+  <!-- Tipos de Banco -->
+  <section>
+    <h2>Tipos de Banco de Dados</h2>
+    <ul>
+      <li>Relacional: PostgreSQL, MySQL</li>
+      <li>Não Relacional: MongoDB</li>
+      <li>Cache: Redis</li>
+    </ul>
+  </section>
+
+  <!-- Exemplo SQL -->
+  <section>
+    <h2>Exemplo Banco de Dados - SQL</h2>
+    <code>
+CREATE TABLE usuarios (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(100),
+  email VARCHAR(100)
+);
+    </code>
+  </section>
+
+  <!-- Integração Frontend + Backend -->
+  <section>
+    <h2>Integração Frontend + Backend</h2>
+    <ul>
+      <li>Frontend consome APIs</li>
+      <li>Backend retorna JSON</li>
+      <li>Comunicação via HTTP</li>
+    </ul>
+  </section>
+
+  <!-- Exemplo Fetch -->
+  <section>
+    <h2>Exemplo Fetch (Frontend)</h2>
+    <code>
+fetch('/api/hello')
+  .then(res => res.json())
+  .then(data => console.log(data));
+    </code>
+  </section>
+
+  <!-- O que é FullStack -->
+  <section>
+    <h2>O que é FullStack?</h2>
+    <ul>
+      <li>Atua no Frontend</li>
+      <li>Atua no Backend</li>
+      <li>Conhece Banco de Dados</li>
+      <li>Visão completa do sistema</li>
+    </ul>
+  </section>
+
+  <!-- Stack FullStack -->
+  <section>
+    <h2>Exemplo de Stack FullStack</h2>
+    <ul>
+      <li>Frontend: React + Tailwind</li>
+      <li>Backend: Node.js + Express</li>
+      <li>Banco: PostgreSQL</li>
+    </ul>
+  </section>
+
+  <!-- Arquitetura -->
+  <section>
+    <h2>Arquitetura Simplificada</h2>
+    <p>Frontend → Backend → Banco de Dados</p>
+  </section>
+
+  <!-- Boas Práticas -->
+  <section>
+    <h2>Boas Práticas</h2>
+    <ul>
+      <li>Código limpo</li>
+      <li>Versionamento com Git</li>
+      <li>Separação de responsabilidades</li>
+      <li>Segurança</li>
+    </ul>
+  </section>
+
+  <!-- Encerramento -->
+  <section>
+    <h2>Conclusão</h2>
+    <p>Frontend, Backend e Banco trabalham juntos</p>
+    <p>FullStack conecta tudo 🚀</p>
+  </section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    transition: 'slide',
+    slideNumber: true
+  });
+</script>
+
+</body>
+</html>
