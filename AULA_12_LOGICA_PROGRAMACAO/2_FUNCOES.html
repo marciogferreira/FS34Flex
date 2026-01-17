@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes em JS</title>
+</head>
+<body>
+
+    <button onclick="exibirMensagem()">Boas Vindas!</button>
+    <button onclick="mudarCorFundo()">Mudar Cor de Fundo</button>
+    <button onclick="pegarNome()">Informar seu Nome</button>
+    
+    <script>
+
+        function exibirMensagem() {
+            alert("Olá Jovem!")
+        }
+
+        function mudarCorFundo() {
+            const cor = prompt("Informe sua Cor Preferida.")
+            document.querySelector("body").style.background = cor
+        }
+
+        function pegarNome() {
+            const nome = prompt("Digite seu nome")
+            alert("Olá " + nome)
+        }
+     
+    </script>
+</body>
+</html>

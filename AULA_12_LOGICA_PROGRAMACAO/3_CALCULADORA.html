@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora com JS</title>
+</head>
+<body>
+    
+    <button onclick="adicao()">Adicao</button>
+    <button>Subtracao</button>
+    <button>Divisao</button>
+    <button>Multiplicacao</button>
+    <button>Resto da Divisao</button>
+    <!-- Pratiquem - 10min -->
+    <script>
+        function adicao() {
+            let numero1 = prompt("Informe Numero 1")
+            let numero2 = prompt("Informe Numero 2")
+            numero1 = Number(numero1)
+            numero2 = Number(numero2)
+
+            const resultado = numero1 + numero2
+            alert("O resultado da Soma é: " + resultado)
+        }
+    </script>
+</body>
+</html>

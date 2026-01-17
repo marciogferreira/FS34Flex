@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao de Lógica de Programacao</title>
+</head>
+<body>
+    <!-- COMENTÁRIO NO HTML -->
+    <script>
+        // COMENTÁRIO NO JAVASCRIPT
+        // FUNCOES BASICAS DO JAVASCRIPT
+        
+        // alert("Oá JS")
+        // var confirmacao = confirm("Voce deseja confirmar o pagamento?")
+        // alert(confirmacao)
+
+        // var nome = prompt("Digite seu nome")
+        // alert(nome)
+
+        // VARIAVEIS DO JAVASCRIPT
+
+        // VAR - PODE ALTERAR VALOR E PODE REDECLARAR VARIAVEL
+        var nome_variavel = "Variavel Var"
+        var nome_variavel = "Outra Variavel"
+
+        // LET - PODE ALTERAR VALOR E NAO PODE REDECLARAR VARIAVEL
+        let nome_escola = "Digital College"
+        nome_escola = "DC"
+
+        // CONST - NAO PODE ALTERAR VALOR E NAO PODE DECLARAR VARIAVEL
+        const curso = "Full Stack"
+
+        // OPERADORES ARITMETICOS, COMPARATIVOS, INCREMENTOS E DECREMENTOS
+        let numero1 = 20
+        let numero2 = 10
+        let resultado = 0
+
+        // ARITMETICOS
+        resultado = numero1 + numero2
+        resultado = numero1 * numero2
+        resultado = numero1 / numero2
+        resultado = numero1 - numero2
+        resultado = numero1 % numero2
+
+        // COMPARATIVOS
+        numero1 = 10 // number
+        numero2 = "10" // string
+        resultado = numero1 == numero2 // true - COMPARA VALOR E NAO COMPARA TIPO
+        resultado = numero1 === numero2 // false - COMPARA VALOR E TIPO
+        resultado = numero1 != numero2 // false
+        resultado = numero1 !== numero2 // true
+        resultado = numero1 > numero2 // false
+        resultado = numero1 >= numero2 // true
+        resultado = numero1 < numero2 // false
+        resultado = numero1 <= numero2 // true
+
+
+        // INCREMENTO
+        let valor1 = 0
+        valor1 = valor1 + 1 // forma 1
+        valor1 += 1 // forma 2
+        valor1++ // forma 3
+
+        // DECREMENTO
+        let valor2 = 10
+        valor2 = valor2 - 1
+        valor2 -= 1
+        valor2--
+
+        
+        
+        console.log(valor1)
+
+        console.log(nome_variavel)
+        console.log(nome_escola)
+        console.log(curso)
+
+        // TIPOS DE DADOS
+        let texto = "Texto" // string
+        let numero_inteiro = 10 // number
+        let numero_decimal = 10.5 // number
+        let logico = true // boolean
+        let nulo = null // null
+        let indefinido // undefined
+
+        let funcao = () => {} // function
+        let objeto = {} // object
+        let vetores = [] // array
+        
+        // ESTRUTURA CONDICIONAL
+
+        // IF...ELSE
+        // let idade = prompt("Digite Sua Idade")
+        
+        // if(idade >= 18) {
+        //     document.write("Voce é maior de idade")
+        //     document.querySelector('body').style.background = 'green'
+        // } else {
+        //     document.write("Voce é menor de idade")
+        //     document.querySelector('body').style.background = 'red'
+        // }
+
+        // 1. CRIE UM PROGRAMA QUE RECEBA O NOME DE UMA COR EM INGLES,
+        // ARMAZENE DENTRO DE UMA VARIAVEL COR E DEPOIS ALTERE A COR DE 
+        // FUNDO DA SUA PAGINA PARA COR INFORMADA PELO USUARIO.
+
+        // let cor = prompt("Informe sua Cor preferida. Informe manuscrito em ingles.")
+        // document.querySelector('body').style.background = cor;
+
+        // FUNCOES
+
+        // FUNCAO SIMPLES - PROCEDIMENTO
+        function nomeDaFuncao() {
+            // Escopo da Funcao
+            document.write("Funcao Executada <br />")
+        } 
+
+        nomeDaFuncao()
+        nomeDaFuncao()
+        nomeDaFuncao()
+
+        // FUNCAO COM PARAMETRO
+        function somarDoisNumeros(v1, v2) {
+            const resultado = v1 + v2
+            document.write("Resultado é: " + resultado + "<br />")
+        }
+
+        somarDoisNumeros(10, 20)
+        somarDoisNumeros(20, 40)
+        somarDoisNumeros(1456, 2958690)
+
+
+        // FUNCAO COM PARAMETRO E COM RETORNO
+        function multiplicarDoisNumeros(numero1, numero2) {
+            const resultado = numero1 * numero2
+            return resultado
+        }
+
+        const resultadoMult = multiplicarDoisNumeros(2, 10)
+        document.write("Resultado Mult é: " + resultadoMult)
+
+        // EXEMPLO DE FUNCAO COM PARAMETRO E RETORNO
+        function liquidificadorVitamina(fruta, leite) {
+            const vitamina = fruta + leite
+            return vitamina
+        }
+
+        const copoComVitaminaBanana = liquidificadorVitamina("Banana", "Leite")
+        
+
+
+
+    </script>
+</body>
+</html>
