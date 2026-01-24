@@ -48,8 +48,10 @@
         </div>
     </div>
 
+    <script src="js/tradutor.js"></script>
     <script>
         function calcularInvestimento() {
+
             let valor = document.getElementById('valor_investimento').value
             let porcentagem = document.getElementById('porcentagem').value
             let periodo = document.getElementById('periodo').value
@@ -64,10 +66,11 @@
             let total = valor + valorAcrescimoMeses
 
             document.getElementById('resultados').innerHTML = `
-                Valor Futuro: <strong>${total}</strong> <br />
-                Lucro Total: <strong>${valorAcrescimoMeses}</strong> <br />
-                Lucro Mensal: <strong>${valorAcrescimo}</strong> <br />
+                Valor Futuro: <strong>${total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</strong> <br />
+                Lucro Total: <strong>${valorAcrescimoMeses.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</strong> <br />
+                Lucro Mensal: <strong>${valorAcrescimo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</strong> <br />
             `
+            
         }
     </script>
 </body>
