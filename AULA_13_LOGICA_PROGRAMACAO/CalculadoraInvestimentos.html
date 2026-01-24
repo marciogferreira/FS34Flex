@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Investimentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                 <h3>Investimento</h3>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <label for="">Valor de Investimento</label>
+                <input type="text" class="form-control" id="valor_investimento" placeholder="100,00">
+            </div>
+            <div class="col">
+                <label for="">Porcentagem</label>
+                <input type="text" class="form-control" id="porcentagem" placeholder="5%">
+            </div>
+            <div class="col">
+                <label for="">Período em Meses</label>
+                <input type="text" class="form-control" id="periodo" placeholder="10">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col d-flex justify-content-end">
+                <button onclick="calcularInvestimento()" class="btn btn-primary">Calcular</button>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col">
+                <h3>Resultados</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="resultados">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcularInvestimento() {
+            let valor = document.getElementById('valor_investimento').value
+            let porcentagem = document.getElementById('porcentagem').value
+            let periodo = document.getElementById('periodo').value
+
+            valor = Number(valor)
+            porcentagem = Number(porcentagem)
+            periodo = Number(periodo)
+
+            let valorAcrescimo = (valor * porcentagem) / 100
+            let valorAcrescimoMeses = valorAcrescimo * periodo
+
+            let total = valor + valorAcrescimoMeses
+
+            document.getElementById('resultados').innerHTML = `
+                Valor Futuro: <strong>${total}</strong> <br />
+                Lucro Total: <strong>${valorAcrescimoMeses}</strong> <br />
+                Lucro Mensal: <strong>${valorAcrescimo}</strong> <br />
+            `
+        }
+    </script>
+</body>
+
+</html>
