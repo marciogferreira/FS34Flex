@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - Logica de Programacao</title>
+</head>
+<body>
+    <script>
+        
+        let numeroA = prompt("Informe o Numero A")
+        let numeroB = prompt("Informe o Numero B")
+        let numeroC = prompt("Informe o Numero C")
+
+        numeroA = Number(numeroA)
+        numeroB = Number(numeroB)
+        numeroC = Number(numeroC)
+
+        let soma = numeroA + numeroB
+        document.write("A Soma é: " + soma + "<br />")
+        
+        if(soma < numeroC) {
+            document.write("O numero C é: " + numeroC + ". A Soma é menor que C")
+        } else {
+            document.write("O numero C é: " + numeroC + ". A Soma é maior ou igual a C")   
+        }
+
+    </script>
+</body>
+</html>

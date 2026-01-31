@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-5">
+                <h3>Soma de Números</h3>
+                <form>
+                    <div>
+                        <label for="">Valor de A</label>
+                        <input type="text" class="form-control" id="valor_a" placeholder="Ex: 10">
+                    </div>
+                    <div>
+                        <label for="">Valor de B</label>
+                        <input type="text" class="form-control" id="valor_b" placeholder="Ex: 12">
+                    </div>
+                    <div>
+                        <label for="">Valor de C</label>
+                        <input type="text" class="form-control" id="valor_c" placeholder="Ex: 20">
+                    </div>
+                    <div class="mt-3">
+                        <button type="button" onclick="calcularA()" id="calcular" class="btn btn-primary btn-sm">Calcular</button>
+                    </div>
+                </form>
+                <div id="resposta">
+                </div>
+             
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcularA() {
+            
+            let valor_a = document.getElementById('valor_a').value
+            let valor_b = document.getElementById('valor_b').value
+            let valor_c = document.getElementById('valor_c').value
+
+            if(valor_a == "") {
+                alert("Informe o Valor A")
+                return
+            }
+
+            if(valor_b == "") {
+                alert("Informe o Valor B")
+                return
+            }
+
+            if(valor_c == "") {
+                alert("Informe o Valor C")
+                return
+            }
+
+            valor_a = Number(valor_a)
+            valor_b = Number(valor_b)
+            valor_c = Number(valor_c)
+
+            let soma = valor_a + valor_b
+            
+            if(soma < valor_c) {
+                document.getElementById('resposta').innerHTML = "<strong>A Soma é Menor que C: </strong>" + soma 
+            } else {
+                document.getElementById('resposta').innerHTML = `
+                    <div class="alert alert-success">
+                        A Soma é Maior ou Igual a C: ${soma}
+                    </div>
+                `
+                // Template String
+            }
+        }   
+    </script>
+</body>
+</html>
