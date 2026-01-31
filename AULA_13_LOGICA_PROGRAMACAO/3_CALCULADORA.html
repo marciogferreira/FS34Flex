@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+</head>
+<body>
+    <h3>Calculadora</h3>
+    <p>Clique no Botão Abaixo para Efetuar as Operações Matemáticas:</p>
+    <button onclick="adicao()">Adição</button>
+    <button>Subtração</button>
+    <button>Divisão</button>
+    <button>Multiplicação</button>
+    <script>
+        function adicao() {
+            let n1 = prompt("Informe o Numero1")
+            let n2 = prompt("Informe o Numero2")
+            n1 = Number(n1)
+            n2 = Number(n2)
+            let soma = n1 + n2
+            alert(soma)
+        }
+    </script>
+</body>
+</html>
