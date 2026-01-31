@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores - Array</title>
+</head>
+<body>
+    <script>
+        let alunos = ["Max", "Maria", "Jose", "Carla"]
+        document.write(alunos[0])
+        document.write("<br />")
+        document.write(alunos[2])
+        document.write("<br />")
+        document.write(alunos[5])
+
+        alunos[4] = "Elmo"
+        alunos[5] = "Elena"
+        document.write("<br />")
+        document.write(alunos)
+        document.write("<br />")
+        document.write(alunos.join(' - '))
+
+        // FUNCOES BASICAS DE UM VETOR
+        let professores = Array()
+        // Unshift add na primeira Posicao
+        professores.unshift("Marcio")
+        professores.unshift("Elmo")
+        professores.unshift("Carol")
+     
+        // Remove a primeira posicao
+        professores.shift()
+       
+        // push add na ultima posicao
+        professores.push("Alex")
+        professores.push("Maria")
+   
+        // pop remove a ultima posicao
+        professores.pop()
+        console.log(professores.length)
+
+
+        // 1. CRIE UM PROGRAMA QUE RECEBA DO USUARIO 5 NOMES E ARMAZENE EM UM ARRAY.
+        
+        // 2. CRIE UM PROGRAMA QUE RECEBA DO USUARIO 3 NOMES, ARMAZENE EM UM ARRAY
+        // E EXIBA A QUANTIDADE TOTAL DE NOMES USANDO O LENGTH
+
+
+
+
+    </script>
+</body>
+</html>

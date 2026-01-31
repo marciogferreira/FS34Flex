@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <script>
+
+        let nomes = []
+        let contador = 0
+
+        for(contador; contador < 5; contador++) {
+            // let nome = prompt("Digite o nome da pessoa")
+            // nomes.push(nome)
+        }
+
+        // document.write(nomes.join('<br />'))
+        // APOS CRIAR O PROGRAMA ACIMA, PERCORRA O ARRAY E MOSTRE OS NOMES
+
+        let indice = 0
+        for(indice; indice < 5; indice++) {
+            document.write(nomes[indice])
+            document.write("<br /> ")
+        }
+
+        // CRIE UM PROGRAMA QUE EXIBA UMA TABUADA DE ADICAO.
+        // 1 ATÉ 10. SEQUENCIAL COM 5. EXEMPLO:
+
+        let contadorT = 0
+        for(contadorT; contadorT < 11; contadorT++) {
+            document.write("5 + " + contadorT + " = <br /> ")
+            document.write(`5 + ${contadorT} = <br /> `)
+        }
+        
+        // Questao 07
+        let logico1 = prompt("Escreva True ou False")
+        let logico2 = prompt("Escreva True ou False")
+
+        logico1 = Boolean(logico1)
+        logico2 = Boolean(logico2)
+
+        if(logico1) {
+            alert("Valor Verdaideiro em Logico1")
+        } else {
+            alert("Valor Falso em Logico1")
+        }
+
+        
+
+    </script>
+</body>
+</html>
