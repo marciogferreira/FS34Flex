@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+
+    <div class="w-[80%] m-auto mt-10">
+      <h3>Calculadora de IMC</h3>
+      <hr>
+      <label for="">Altura</label>
+      <br>
+      <input type="text" id="altura" class="p-1 border border-black rounded-md">
+      <br>
+      <label for="">Peso</label>
+      <br>
+      <input type="text" id="peso" class="p-1 border border-black rounded-md">
+      <button onclick="calcularIMC()" class="bg-black text-white p-2 rounded-md">Calcular</button>
+      <div class="mt-4">
+         <h3> Resultados:</h3>
+          <div id="resultados">
+
+          </div>
+      </div>
+    </div>
+
+    <script>
+      function calcularIMC() {
+          let altura = document.getElementById('altura').value
+          let peso = document.getElementById('peso').value
+
+          altura = Number(altura)
+          peso = Number(peso)
+
+          const imc = peso / (altura * altura)
+
+          if(imc < 18.5) {
+            document.getElementById('resultados').innerHTML = `
+              Abaixo do Peso
+              <img src="images/imc.jpeg" width="150px" />
+            `
+          } else {
+            document.getElementById('resultados').innerHTML = `
+              Acima do Peso
+              <img src="images/imc.jpeg" width="150px" />
+            `
+          }
+      }
+    </script>
+</body>
+</html>
