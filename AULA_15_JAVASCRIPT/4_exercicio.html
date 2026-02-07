@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Desafio 01 - Listar Tarefas</h3>
+                <hr>
+                <input type="text" class="form-control" id="valor">
+                <button onclick="AdicionarNome()" class="btn btn-primary mt-2" id="botao">Adicionar</button>
+                <hr>
+                <div id="lista"></div>
+            </div>
+        </div>
+    </div>
     <script>
-        
+        // 1. CRIE UM PROGRAMA QUE POSSUA UM CAMPO NO HTML E UM BOTAO.
+        // AO CLICAR NO BOTAO, O JS DEVE PEGAR O VALOR DO CAMPO E ARMAZENAR EM UM ARRAY NOMES.
+        // DEPOIS, O JS DEVE IMPRIMIR TODOS OS NOMES NO DOCUMENT.WRITE
+        let nomes = []
+
+        function AdicionarNome() {
+            let valor = document.getElementById("valor").value
+            nomes.push(valor)
+            document.getElementById("valor").value = ""
+            document.getElementById("lista").innerHTML = ""
+            for (let i = 0; i < nomes.length; i++) {
+                document.getElementById("lista").innerHTML += `<li>${nomes[i]}</li>`
+            }
+        }
+
+
     </script>
 </body>
 </html>
