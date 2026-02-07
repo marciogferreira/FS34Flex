@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores - Arrays</title>
+</head>
+<body>
+    <script>
+        const legumes = Array("Cenoura", "Batata", "Abóbora", "Beterraba", "Chuchu")
+        const verduras = []
+        const frutas = ["Maçã", "Banana", "Laranja", "Uva", "Abacaxi"]
+
+        console.log(legumes)
+        console.log(verduras)
+        console.log(frutas)
+
+        console.log(frutas[0])
+        console.log(frutas[1])
+        console.log(frutas[2])
+        console.log(frutas[3])
+        console.log(frutas[4])
+
+        frutas[0] = "Melancia"
+        frutas[5] = "Manga"
+
+        frutas.push("Morango")
+        frutas.unshift("Abacate")
+        frutas.shift()
+        frutas.pop()
+        frutas.pop()
+
+        document.write(frutas.join(" <br /> "))
+        document.write("<br />")
+        
+        document.write(`Quantidade de Frutas: ${frutas.length}`)
+
+        
+
+
+
+    </script>
+</body>
+</html>

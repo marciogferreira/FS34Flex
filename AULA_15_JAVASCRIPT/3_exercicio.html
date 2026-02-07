@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+    <input type="text" id="valor">
+    <button onclick="adicionarNome()">Adicionar Nome</button>
+    <div id="lista"></div>
+    
+    <script>
+        const nomes = []
+
+        function listarNomes() {
+            document.getElementById("lista").innerHTML = nomes.join("<br />")
+        }
+
+        function adicionarNome() {
+            const nome = document.getElementById("valor").value
+            nomes.push(nome)
+            document.getElementById("valor").value = ""
+            listarNomes()
+        }
+
+
+    </script>
+</body>
+</html>

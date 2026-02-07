@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Repeticao - FOR</title>
+</head>
+<body>
+    <script>
+        document.write("FullStack - JavaScript")
+        // document.write("<p>Texto</p>")
+        // document.write("<p>Texto</p>")
+        // document.write("<p>Texto</p>")
+        // document.write("<p>Texto</p>")
+        // document.write("<p>Texto</p>")
+        // document.write("<p>Texto</p>")
+
+        for(let i = 0; i < 6; i++) {
+            document.write(`<p>${i} - Texto</p>`)
+        }
+
+        document.write("------------------------------")
+
+        for(let i = 6; i > 0; i--) {
+            document.write(`<p>${i} - Texto</p>`)
+        }
+
+        for(let i = 0; i < 10; i++) {
+            document.write(i + "<br />")
+
+            if(i == 5) {
+                document.write("Chegou no 5 <br />")
+            }
+        }
+
+        for(let i = 9; i >= 0 ; i--) {
+            document.write(i + "<br />")
+            
+        }
+
+        // 1. Escreva um programa que imprima os números de 1 a 10 usando um loop for.
+        // 2. Escreva um programa que imprima os números pares de 1 a 20 usando um loop for.
+
+        const pares = []
+        const impares = []
+
+        for(let i = 1; i <= 20; i++) {
+            if(i % 2 == 0) {
+                pares.push(i)
+            } else {
+                impares.push(i)
+            }
+        }
+        console.log(pares)
+
+
+        const frutas = ["maçã", "banana", "laranja", "uva", "abacaxi"]
+        frutas[0]
+        frutas[1]
+        frutas[2]
+        frutas[3]
+        frutas[4]
+        frutas[5] = "melancia"
+        frutas[6] = "manga"
+
+        for(let i = 0; i < frutas.length; i++) {
+            document.write(frutas[i] + "<br />")
+            if(frutas[i] == "laranja") {
+                document.write("Achei a laranja! <br />")
+                 document.write(`<p style="color: orange;">${frutas[i]}</p>`)
+            }
+        }   
+
+        const elementos = ["Fogo", "Água", "Terra", "Ar", "Éter"]
+        // 3. Escreva um programa que imprima os elementos de um array usando um loop for.
+        // 4. Escreva um programa que imprima os elementos de um array em ordem inversa usando um loop for.
+
+        for(let i = 0; i < elementos.length; i++) {
+            document.write(elementos[i] + "<br />")
+        }
+
+        for(let i = elementos.length - 1; i >= 0; i--) {
+            document.write(elementos[i] + "<br />")
+        }
+
+        
+
+    
+     
+
+
+    </script>
+</body>
+</html>
