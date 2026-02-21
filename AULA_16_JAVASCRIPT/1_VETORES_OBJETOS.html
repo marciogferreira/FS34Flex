@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Dados: Vetores e Objetos</title>
+</head>
+<body>
+    <script>
+        // TIPOS DE DADOS PRIMITIVOS
+        let texto = "Olá, mundo!"; // String
+        let numero = 42; // Number
+        let logico = true; // Boolean
+        let nulo = null; // Null
+        let indefinido; // Undefined
+
+        console.log(texto)
+
+        // VETORES (Arrays)
+        let frutas = ["maçã", "banana", "laranja"]; // Array de strings
+        let numeros = [1, 2, 3, 4, 5]; // Array de números
+        let misturado = ["texto", 123, true, null, undefined]; // Array misto
+        
+        console.log(frutas[0]) // Acessando o primeiro elemento do array de frutas
+
+        // OBJETOS
+        let pessoa = {
+            nome: "Maria",
+            idade: 30,
+            profissao: "Engenheira",
+            dependentes: [
+                {
+                    nome: "João",
+                    idade: 5,
+                    parentesco: "Filho"
+                },
+                {
+                    nome: "Ana",
+                    idade: 3,
+                    parentesco: "Filha"
+                }
+            ],
+            conjuge: {
+                nome: "Carlos",
+                idade: 32,
+                profissao: "Médico"
+            },
+            veiculos: [
+                {
+                    marca: "Honda",
+                    modelo: "Civic",
+                    ano: 2018,
+                    multas: [
+                        {
+                            data: "2023-01-15",
+                            valor: 150,
+                            motivo: "Excesso de velocidade",
+                            status: "Paga"
+                        },
+                        {
+                            data: "2023-03-10",
+                            valor: 200,
+                            motivo: "Estacionamento proibido",
+                            status: "Pendente"
+                        }
+                    ]
+                },
+                {
+                    marca: "Ford",
+                    modelo: "Focus",
+                    ano: 2020
+                }
+            ]
+        }
+
+        console.log(pessoa.veiculos[0].multas[1])
+        console.log(pessoa.dependentes[1].nome)
+
+        console.log(pessoa.conjuge.nome)
+        pessoa.dependentes[0]
+
+        console.log(pessoa)
+        console.log(pessoa.nome)
+        pessoa.nome = "Jose"
+
+        let carro = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            ano: 2020,
+            cor: "Prata"
+        }
+
+        let pessoas = [
+            {
+                nome: "Alice",
+                idade: 25,
+                profissao: "Designer"
+            },
+            {
+                nome: "Bob",
+                idade: 28,
+                profissao: "Desenvolvedor"
+            },
+            {
+                nome: "Charlie",
+                idade: 22,
+                profissao: "Estudante"
+            }
+        ]
+
+        let pessoaBob = pessoas[1]
+        console.log(pessoaBob.nome) // Acessando o nome de Bob
+
+
+        console.log(pessoas)
+        console.log(pessoas[0])
+        console.log(pessoas[1])
+
+
+
+        // FOR E WHILE PARA PERCORRER ARRAYS
+
+        // FOREACH, MAP, FILTER E REDUCE    
+        
+        let legumes = ["cenoura", "batata", "alface", "tomate"]
+        
+        function imprimirLegume(legume, indice) {
+            // Template String
+            console.log(`Legume ${indice}: ${legume}`)
+        }
+
+        legumes.forEach(imprimirLegume)
+
+
+
+        let carros = ["Honda Civic", "Toyota Corolla", "Ford Focus", "Chevrolet Cruze"]
+
+
+        // FUNCOES DE SETA
+        carros.forEach((carro, indice) => {
+            console.log(`Carro ${indice}: ${carro}`)
+        })
+
+        
+        let funcionarios = [
+            { nome: "Ana", salario: 3000 },
+            { nome: "Bruno", salario: 3500 },
+            { nome: "Carla", salario: 4000 }
+        ]
+
+        funcionarios.forEach((item, index) => {
+            document.write(`
+                Funcionário: ${index} - ${item.nome}, Salário: R$ ${item.salario}<br>
+            `)
+        })
+        
+
+        // carros.forEach(() => {})
+
+
+    </script>
+</body>
+</html>
