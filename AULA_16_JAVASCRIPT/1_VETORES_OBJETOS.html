@@ -142,6 +142,7 @@
         })
 
         
+
         let funcionarios = [
             { nome: "Ana", salario: 3000 },
             { nome: "Bruno", salario: 3500 },
@@ -158,6 +159,120 @@
         // carros.forEach(() => {})
 
 
+
+
+        // MAP -> RETORNA UM NOVO ARRAY COM OS ELEMENTOS TRANSFORMADOS
+        let dias_semana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
+
+        const novo_dias_semana = dias_semana.map((semana, index) => {
+            if(semana === "Sábado" || semana === "Domingo") {
+                return semana
+            }
+            return semana + "-Feira"
+        })
+
+        novo_dias_semana.map((semana, index) => {
+            document.write(`Dia ${index}: ${semana} <br />`)
+        })
+
+        // PERCORRENDO UMA MATRIZ (ARRAY DE ARRAYS)
+        let matriz = [
+            [1, 2, 3],
+            [4, 5, { nome: "Objeto na matriz", valor: 10 }],
+            [7, 8, 9]            
+        ]
+        
+        console.log(matriz[0][2])
+        console.log(matriz[2][2])
+        console.log(matriz[1][1])
+        console.log(matriz[1][2].nome)
+
+
+        // PERCORRENDO ARRAY DE ARRAYS
+        let matriz2 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ]
+
+        matriz2.map((linha, indexLinha) => {
+            linha.map((coluna, indexColuna) => {
+                console.log(`${coluna}`)
+            })
+        })
+
+
+        let pessoaProfisional = {
+            nome: "Maria",
+            idade: 30,
+            profissao: "Engenheira",
+            dependentes: [
+                {
+                    nome: "João",
+                    idade: 5,
+                    parentesco: "Filho"
+                },
+                {
+                    nome: "Ana",
+                    idade: 3,
+                    parentesco: "Filha"
+                }
+            ],
+            conjuge: {
+                nome: "Carlos",
+                idade: 32,
+                profissao: "Médico"
+            },
+            veiculos: [
+                {
+                    marca: "Honda",
+                    modelo: "Civic",
+                    ano: 2018,
+                    multas: [
+                        {
+                            data: "2023-01-15",
+                            valor: 150,
+                            motivo: "Excesso de velocidade",
+                            status: "Paga"
+                        },
+                        {
+                            data: "2023-03-10",
+                            valor: 200,
+                            motivo: "Estacionamento proibido",
+                            status: "Pendente"
+                        }
+                    ]
+                },
+                {
+                    marca: "Ford",
+                    modelo: "Focus",
+                    ano: 2020
+                }
+            ]
+        }
+
+
+        document.write(pessoaProfisional.nome + "<br />")
+        document.write(pessoaProfisional.idade + "<br />")
+        pessoaProfisional.dependentes.map((dependente) => {
+            document.write(`${dependente.nome}`)
+        })
+
+        // Veiculos
+        pessoaProfisional.veiculos.map((veiculo) => {
+            document.write("Veiculo Marca: " + veiculo.marca + "<br />")
+            veiculo.multas.map((multa) => {
+                document.write(`
+                    Multa: ${multa.motivo} - 
+                    Valor: R$ ${multa.valor} - Status: ${multa.status} <br />`)
+            })
+        })
+
+
+
+
+
+       
     </script>
 </body>
 </html>
