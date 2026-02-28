@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pessoas = [
+            {
+                id: 1,
+                nome: "Carlos Silva",
+                idade: 42,
+                cpf: "123.456.789-00",
+                email: "carlos.silva@email.com",
+                telefone: "(11) 98765-4321",
+                dependentes: [
+                    {
+                        nome: "Ana Silva",
+                        idade: 12,
+                        parentesco: "Filha"
+                    },
+                    {
+                        nome: "Pedro Silva",
+                        idade: 8,
+                        parentesco: "Filho"
+                    }
+                ]
+            },
+            {
+                id: 2,
+                nome: "Mariana Souza",
+                idade: 35,
+                cpf: "987.654.321-00",
+                email: "mariana.souza@email.com",
+                telefone: "(21) 91234-5678",
+                dependentes: [
+                    {
+                        nome: "Lucas Souza",
+                        idade: 5,
+                        parentesco: "Filho"
+                    }
+                ]
+            },
+            {
+                id: 3,
+                nome: "Ricardo Oliveira",
+                idade: 29,
+                cpf: "456.789.123-00",
+                email: "ricardo.oliveira@email.com",
+                telefone: "(31) 99876-5432",
+                dependentes: []
+            }
+        ];
+
+        console.log(pessoas);
+
+        pessoas.map(pessoa => {
+            document.write(`<h3>${pessoa.nome}</h3>`)
+            document.write(`CPF: ${pessoa.cpf}`)
+            
+            // Dependentes
+            document.write("<ul>")
+            pessoa.dependentes.map(dep => {
+                document.write(`<li>${dep.nome}</li>`)
+            })
+             document.write("</ul>")
+
+            document.write('<hr>')
+        })
+    </script>
+</body>
+</html>

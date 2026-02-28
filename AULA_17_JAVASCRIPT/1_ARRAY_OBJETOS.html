@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objeto = {}
+        const vetor = []
+
+        const pessoa = {
+            nome: "Maria",
+            idade: 35,
+            altura: 1.65,
+            dependente: {
+                nome: 'José',
+                idade: 5
+            },
+            carros: [
+                {
+                    modelo: 'Onix',
+                    marca: "Chevrolet",
+                    cor: "Branco"
+                },
+                {
+                    modelo: 'Onix',
+                    marca: "Chevrolet",
+                    cor: "Branco"
+                }
+            ]
+        }
+        console.log(pessoa.idade)
+        pessoa.dependente.nome
+
+        pessoa.carros.map(carro => {
+            console.log(carro.cor)
+        })
+        const cursos = [
+            { 
+                nome: "FullStack",
+                valor: 7500.00,
+                descricao: "Curso completo com HTML, CSS, JS, NodeJs e Banco de Dados"
+            },
+            {
+                nome: "Frontend",
+                valor: 6200.00,
+                descricao: "Curso completo com HTML, CSS e JS"
+            }
+        ]
+        // PERCORRA O ARRAY ACIMA USANDO MAP E EXIBA O NOME DO CURSO, VALOR E DESCRICAO.
+        // UTILIZE O document.write() PARA EXIBIR CADA CURSO.
+
+        cursos.map(curso => {
+            if(curso.nome === 'Frontend') {
+                document.write(curso.nome)
+            }
+        })
+
+        
+
+
+    </script>
+</body>
+</html>
