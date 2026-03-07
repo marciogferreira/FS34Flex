@@ -6,6 +6,8 @@
         <title>Map</title>
     </head>
     <body>
+
+        
         <script>
             const carros = [
                 { marca: 'Toyota', modelo: 'Corolla', ano: 2020, valor: 80000 },
@@ -18,7 +20,51 @@
             // a) Percorra todos os objetos com Map e exiba na tela todos os carros.
             // b) Crie uma nova lista de carros com o valor aumentado em 10%.
             // c) Filtre os carros que são do ano 2020 ou mais recentes.
+            // d) Exiba o valor total dos carros somados
+            carros.map((carro) => {
+                document.write(`
+                    Marca: ${carro.marca} - 
+                    Modelo: ${carro.modelo} - 
+                    Ano: ${carro.ano} - 
+                    Valor: R$${carro.valor} <br>
+                `)
+            })
 
+            const carrosComValorAumentado = carros.map((carro) => {
+                carro.valor = carro.valor + ((carro.valor * 10) / 100)
+                return carro
+            })
+
+            const carros2020OuMaisRecentes = carros.filter((carro) => {
+                if(carro.ano >= 2020) {
+                    return carro
+                } else {
+                    return false
+                }
+            })
+
+
+            // SOMANDOS VALOR TOTAL DOS CARROS
+
+            let valorTotalCarros = 0
+            carros.map((carro) => {
+                valorTotalCarros = valorTotalCarros + carro.valor
+            })
+            // alert(valorTotalCarros)
+
+            // SOMANDO TUDO COM REDUCE
+            // carros.map(callBack)
+            // carros.filter(callBack)
+            // carros.reduce(callBack, valorInicial)
+
+            let valorInicial = 0
+
+            const totalCarros = carros.reduce((valorAcumulado, carro) => {
+                return valorAcumulado + carro.valor
+            }, valorInicial)
+
+            document.write(`Valor total dos carros: R$ ${totalCarros}`)
+            console.log(totalCarros)
         </script>
     </body>
     </html>

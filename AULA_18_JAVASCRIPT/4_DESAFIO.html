@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Veículos em Loja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col p-3">
+                <h1>Lista de Veículos em Loja</h1>
+                <br />
+                <input type="text" name="pesquisa" id="pesquisa" onkeyup="buscarDados()" class="form-control"> 
+                <br>
+                <button class="btn btn-primary" onclick="buscarDados()" id="btn-buscar">Buscar</button>
+                <br />
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Ano</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-veiculos">
+                        
+                    </tbody>
+                    <footer>
+                            <tr>
+                                <td colspan="3" class="text-end"><strong>Valor Total:</strong></td>
+                                <td id="valor-total"></td>
+                            </tr>
+                    </footer>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const carros = [
+            { marca: 'Toyota', modelo: 'Corolla', ano: 2020, valor: 80000 },
+            { marca: 'Honda', modelo: 'Civic', ano: 2019, valor: 75000 },
+            { marca: 'Ford', modelo: 'Mustang', ano: 2021, valor: 150000 },
+            { marca: 'Chevrolet', modelo: 'Camaro', ano: 2020, valor: 120000 }
+        ];
+        
+        function exibirCarros(carrosExibidos) {
+            let conteudo = ""
+            carrosExibidos.map((carro) => {
+                conteudo = conteudo + `
+                    <tr>
+                        <td>${carro.marca}</td>
+                        <td>${carro.modelo}</td>
+                        <td>${carro.ano}</td>
+                        <td>R$${carro.valor}</td>
+                    </tr>
+                `
+            })
+
+            document.getElementById("tabela-veiculos").innerHTML = conteudo
+        }
+
+        function calcularValorTotal() {
+            let valorTotal = carros.reduce((valorAcumulado, carro) => {
+                return valorAcumulado + carro.valor
+            }, 0)
+            document.getElementById("valor-total").innerHTML = `R$ ${valorTotal}`
+        }
+
+        exibirCarros(carros)
+        calcularValorTotal()
+
+        function buscarDados() {
+            const pesquisa = document.getElementById("pesquisa").value
+            const carrosFiltrados = carros.filter(carro => {
+
+                const marca = carro.marca.toLowerCase()
+                const modelo = carro.modelo.toLowerCase()
+                const pesquisaMin = pesquisa.toLowerCase()
+
+                const ResultadoPesquisaMarca = marca.indexOf(pesquisaMin) >= 0
+                const ResultadoPesquisaModelo = modelo.indexOf(pesquisaMin) >= 0
+
+                if(ResultadoPesquisaMarca || ResultadoPesquisaModelo) {
+                    return carro
+                } else {
+                    return false
+                }
+            })
+            exibirCarros(carrosFiltrados)
+        }
+
+    </script>
+</body>
+</html>
