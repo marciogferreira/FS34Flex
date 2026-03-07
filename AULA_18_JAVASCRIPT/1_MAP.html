@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        const texto = "Olá, mundo!";
+        const objeto = {}
+        const pessoas = [
+            { nome: 'João', idade: 25, sexo: 'Masculino' },
+            { nome: 'Maria', idade: 30, sexo: 'Feminino' },
+            { nome: 'Pedro', idade: 20, sexo: 'Masculino' }
+        ]
+        let pessoasAlteradas = []
+        // ALTERANDO DADOS DE UM ARRAY COM O MAP
+        pessoasAlteradas = pessoas.map((objeto, indice, listaPessoas) => {
+            objeto.nome = objeto.nome + " Gomes"
+            objeto.idade = objeto.idade + 1
+            return objeto
+        })
+
+        console.log(pessoasAlteradas)
+
+        pessoas.map((objeto, posicao) => {
+            document.write(`Nome: ${objeto.nome} - Idade: ${objeto.idade} <br>`)
+        })
+
+        // FILTER
+        const pessoasMaioresDe21 = pessoas.filter((objeto) => {
+            if(objeto.idade > 21) {
+                return objeto
+            } else {
+                return false
+            }
+        })
+        console.log(pessoasMaioresDe21)
+
+
+
+        const carros = [
+            { marca: 'Toyota', modelo: 'Corolla', ano: 2020, valor: 80000 },
+            { marca: 'Honda', modelo: 'Civic', ano: 2019, valor: 75000 },
+            { marca: 'Ford', modelo: 'Mustang', ano: 2021, valor: 150000 },
+            { marca: 'Chevrolet', modelo: 'Camaro', ano: 2020, valor: 120000 }
+        ];
+    </script>
+</body>
+</html>
