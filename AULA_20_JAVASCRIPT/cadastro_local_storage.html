@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro com LocalStorage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Cadastro de Alunos</h4>
+                <a href="grid_local_storage.html" class="btn btn-primary btn-sm">Listagem</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="">
+                    <div class="mb-2">
+                        <label for="">Nome</label>
+                        <input type="text" class="form-control" id="nome" />
+                    </div>
+                    <div class="mb-2">
+                        <label for="">E-mail</label>
+                        <input type="email" class="form-control" id="email" />
+                    </div>
+                    <div>
+                        <button onclick="salvarDados()" type="button" class="btn btn-primary btn-sm">
+                            Salvar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let lista = []
+        
+        if(localStorage.getItem('alunos')) {
+            const listaTexto = localStorage.getItem('alunos');
+            lista = JSON.parse(listaTexto)
+        }
+
+        console.log("Lista", lista)
+
+        function salvarDados() {
+            const nome = document.getElementById('nome').value
+            const email = document.getElementById('email').value
+
+            const aluno = {
+                nome: nome,
+                email: email
+            }
+
+            lista.push(aluno)
+
+            // Convertendo Array para String
+            const listaTexto = JSON.stringify(lista)
+
+            // Guardando dados em LocalStorage
+            localStorage.setItem('alunos', listaTexto)
+
+            document.getElementById('nome').value = ''
+            document.getElementById('email').value = ''
+        }
+    </script>
+</body>
+</html>

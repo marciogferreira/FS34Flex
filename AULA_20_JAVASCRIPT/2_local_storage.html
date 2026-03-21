@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <a href="2_local_storage.html">Página 01</a>
+    &nbsp;
+    <a href="3_local_storage.html">Página 02</a>
+
+    <input type="text" id="dado">
+    <button onclick="salvarLocalStorage()">Gravar Dado</button>
+    <button onclick="deletarLocalStorage()">Deletar Dado</button>
+    <script>
+        function salvarLocalStorage() {
+            const dado = document.getElementById('dado').value
+            // Criando Dado no LocalStorage
+            localStorage.setItem('FS34', dado)
+        }
+
+        function deletarLocalStorage() {
+            localStorage.removeItem('FS34')
+        }
+    </script>
+</body>
+</html>

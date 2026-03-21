@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Dados com LocalStorage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4>Listagem de Alunos</h4>
+                <a href="cadastro_local_storage.html" class="btn btn-primary btn-sm">Cadastro</a>
+                <input type="text" class="form-control" id="busca" placeholder="Pesquisar...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const listaTexto = localStorage.getItem('alunos')
+        // Converte JSON para Objeto ou Array
+        const lista = JSON.parse(listaTexto)
+        
+        console.log(listaTexto)
+        console.log(lista)
+
+        function listarDados() {
+             document.getElementById('lista').innerHTML = '';
+            lista.map((aluno, posicao) => {
+                document.getElementById('lista').innerHTML += `
+                    <tr>
+                        <td>${posicao}</td>
+                        <td>${aluno.nome}</td>
+                        <td>${aluno.email}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">Editar</button>
+                            &nbsp;
+                            <button class="btn btn-danger btn-sm" onclick="excluirItem(${posicao})">Excluir</button>
+                        </td>
+                    </tr>
+                `
+            })
+        }
+
+        listarDados()
+
+        function excluirItem(posicao) {
+            const confirmacao = confirm("Deseja Deletar o Usuário de ID " + posicao + "?")
+            if(confirmacao) {
+                lista.splice(posicao, 1)
+                localStorage.setItem('alunos', JSON.stringify(lista))
+                listarDados()
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
