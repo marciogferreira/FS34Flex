@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>React Hooks</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css">
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1 -->
+    <section>
+      <h2>React Hooks</h2>
+      <p>Entendendo o conceito e uso</p>
+    </section>
+
+    <!-- Slide 2 -->
+    <section>
+      <h3>O que são Hooks?</h3>
+      <p>Funções que permitem usar recursos do React em componentes funcionais.</p>
+    </section>
+
+    <!-- Slide 3 -->
+    <section>
+      <h3>Por que usar Hooks?</h3>
+      <ul>
+        <li>Evita classes</li>
+        <li>Código mais simples</li>
+        <li>Reutilização de lógica</li>
+      </ul>
+    </section>
+
+    <!-- Slide 4 -->
+    <section>
+      <h3>useState</h3>
+      <pre><code class="language-jsx">
+const [contador, setContador] = useState(0);
+      </code></pre>
+    </section>
+
+    <!-- Slide 5 -->
+    <section>
+      <h3>Exemplo useState</h3>
+      <pre><code class="language-jsx">
+function Contador() {
+  const [contador, setContador] = useState(0);
+
+  return (
+    <button onClick={() => setContador(contador + 1)}>
+      {contador}
+    </button>
+  );
+}
+      </code></pre>
+    </section>
+
+    <!-- Slide 6 -->
+    <section>
+      <h3>useEffect</h3>
+      <pre><code class="language-jsx">
+useEffect(() => {
+  console.log('Executou');
+}, []);
+      </code></pre>
+    </section>
+
+    <!-- Slide 7 -->
+    <section>
+      <h3>Outros Hooks</h3>
+      <ul>
+        <li>useContext</li>
+        <li>useRef</li>
+        <li>useMemo</li>
+        <li>useCallback</li>
+      </ul>
+    </section>
+
+    <!-- Slide 8 -->
+    <section>
+      <h3>Regras dos Hooks</h3>
+      <ul>
+        <li>Somente no topo do componente</li>
+        <li>Não usar dentro de loops ou condições</li>
+        <li>Somente em funções React</li>
+      </ul>
+    </section>
+
+    <!-- Slide 9 -->
+    <section>
+      <h3>Hooks Personalizados</h3>
+      <pre><code class="language-jsx">
+function useContador() {
+  const [valor, setValor] = useState(0);
+
+  function incrementar() {
+    setValor(valor + 1);
+  }
+
+  return { valor, incrementar };
+}
+      </code></pre>
+    </section>
+
+    <!-- Slide 10 -->
+    <section>
+      <h3>Resumo</h3>
+      <p>Hooks simplificam o uso de estado e lógica no React moderno.</p>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script>
+  Reveal.initialize();
+</script>
+
+</body>
+</html>
